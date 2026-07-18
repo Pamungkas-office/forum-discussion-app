@@ -25,3 +25,5 @@ yarn-error.log*
 .vercel
 /storybook-static
 *.zip
+cypress/screenshots
+cypress/videos
