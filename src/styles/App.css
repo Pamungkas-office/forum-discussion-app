@@ -448,3 +448,164 @@ body {
   margin-bottom: 1rem;
   color: #555;
 }
+
+* {
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 8px rgba(26, 115, 232, 0.4);
+  transform: translateY(-1px);
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.auth-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  transition: color 0.2s;
+}
+
+.navbar-brand:hover {
+  color: #1557b0;
+}
+
+.thread-item h3 {
+  transition: color 0.2s;
+}
+
+.thread-item:hover h3 {
+  color: #1557b0;
+}
+
+.loading-spinner {
+  border-width: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.comment-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.category-btn {
+  font-weight: 500;
+}
+
+.category-btn:hover:not(.active) {
+  background-color: #f0f6ff;
+  transform: translateY(-1px);
+}
+
+.category-btn.active {
+  box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+}
+
+.vote-btn {
+  font-weight: 500;
+}
+
+.vote-btn:hover:not(.upvoted):not(.downvoted) {
+  background-color: #f8f9fa;
+  border-color: #1a73e8;
+}
+
+.leaderboard-item {
+  transition: background-color 0.2s;
+}
+
+.leaderboard-item:hover {
+  background-color: #f8f9fa;
+}
+
+.empty-state {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.error-message {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+    margin: 1rem auto;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment-form {
+    flex-direction: column;
+  }
+
+  .auth-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .leaderboard-item {
+    flex-wrap: wrap;
+  }
+}
